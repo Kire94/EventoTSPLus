@@ -1,0 +1,8 @@
+{
+  "name": "EventoTSPlus",
+  "app_id": "f0cfbf05",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

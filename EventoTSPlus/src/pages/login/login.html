@@ -1,0 +1,56 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
+
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content> -->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-image">
+  <div padding text-center>
+    <img width="200px" src="../../assets/imgs/images/tsplus_neo_logo.png">
+  </div>
+
+  <form [formGroup]="myForm" (ngSubmit)="loginUser()">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Email:</ion-label>
+        <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="key" item-left></ion-icon>
+        <ion-label stacked>Password:</ion-label>
+        <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Ingresar</button>
+    </div>
+  </form>
+  <div text-center>
+    <a ion-button block clear (click)="goToSignup()">
+      Nueva cuenta
+    </a>
+    <a ion-button block clear (click)="goToResetPassword()">
+      Olvide password
+    </a>
+  </div>
+</ion-content>
